@@ -14,7 +14,7 @@ export default async function AdminInventoryPage() {
     <div>
       <h1 className="font-display text-2xl text-cream-50">Inventory</h1>
       <p className="mt-1 font-body text-sm text-cream-100/60">
-        Tracking is opt-in per item — most food is made to order and doesn't need
+        Tracking is opt-in per item — most food is made to order and doesn’t need
         stock counts. Enable it for anything with a finite count (bottled drinks,
         limited-run specials, etc.).
         {lowStockCount > 0 &&

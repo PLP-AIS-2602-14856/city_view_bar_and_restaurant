@@ -30,7 +30,7 @@ export function CheckoutForm() {
           Order {confirmation.orderNumber} placed
         </p>
         <p className="mt-1 font-body text-sm text-charcoal-700">
-          Thank you, {confirmation.contactName}. We've received your order.
+          Thank you, {confirmation.contactName}. We’ve received your order.
         </p>
 
         <ul className="mt-5 space-y-1.5">

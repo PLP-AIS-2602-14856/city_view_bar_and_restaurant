@@ -3,15 +3,16 @@ import { createClient } from '@/lib/supabase/server';
 import { signOutAction } from '@/lib/auth/actions';
 import { Section, Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
+import type { ProfileRow } from '@/types/database.types';
 
 export default async function AccountPage() {
   const user = await requireCustomer();
   const supabase = createClient();
   const { data: profile } = await supabase
     .from('profiles')
-    .select('*')
+    .select('id, full_name, phone, role, is_active, created_at, updated_at')
     .eq('id', user.id)
-    .single();
+    .single<ProfileRow>();
 
   return (
     <Section className="min-h-[60vh]">

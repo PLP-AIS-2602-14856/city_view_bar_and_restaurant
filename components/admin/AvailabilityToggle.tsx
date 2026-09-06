@@ -19,7 +19,9 @@ export function AvailabilityToggle({
       type="button"
       disabled={isPending}
       onClick={() =>
-        startTransition(() => toggleProductAvailabilityAction(productId, !isAvailable, redirectTo))
+        startTransition(async () => {
+          await toggleProductAvailabilityAction(productId, !isAvailable, redirectTo);
+        })
       }
       className={`rounded-full px-2.5 py-1 font-body text-xs disabled:opacity-50 ${
         isAvailable ? 'bg-emerald-500/20 text-emerald-300' : 'bg-cream-50/10 text-cream-100/70'

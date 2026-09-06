@@ -27,8 +27,8 @@ export function ReservationForm() {
       <div className="rounded-md border border-gold-500/30 bg-gold-500/5 p-6">
         <p className="font-display text-xl text-charcoal-900">Reservation requested</p>
         <p className="mt-2 font-body text-sm text-charcoal-700">
-          We've received your request and will confirm it by phone or email shortly.
-          Reservations are reviewed by staff, so this isn't guaranteed until confirmed.
+          We’ve received your request and will confirm it by phone or email shortly.
+          Reservations are reviewed by staff, so this isn’t guaranteed until confirmed.
         </p>
       </div>
     );

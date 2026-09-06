@@ -14,7 +14,7 @@ export default async function ReservationsPage() {
         <p className="font-body text-sm text-gold-700">Reservations</p>
         <h1 className="mt-2 font-display text-4xl text-charcoal-900">Reserve a Table</h1>
         <p className="mt-3 font-body text-sm text-charcoal-700">
-          Tell us when you'd like to visit and we'll confirm your table.
+          Tell us when you’d like to visit and we’ll confirm your table.
           {settings.phone && ` For same-day or urgent requests, call us at ${settings.phone}.`}
         </p>
 

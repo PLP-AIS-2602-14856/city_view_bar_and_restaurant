@@ -34,6 +34,7 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
   const varietal = typeof attrs.varietal === 'string' ? attrs.varietal : null;
   const origin = typeof attrs.origin === 'string' ? attrs.origin : null;
   const allergens = Array.isArray(attrs.allergens) ? (attrs.allergens as string[]) : [];
+  const [firstImage, ...restImages] = product.images;
 
   return (
     <Section className="min-h-[70vh]">
@@ -47,11 +48,11 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
 
         <div className="mt-6 grid gap-10 md:grid-cols-2">
           <div>
-            {product.images.length > 0 ? (
+            {firstImage ? (
               <div className="relative aspect-[4/3] overflow-hidden rounded-md">
                 <Image
-                  src={getProductImageUrl(product.images[0].storagePath)}
-                  alt={product.images[0].altText ?? product.name}
+                  src={getProductImageUrl(firstImage.storagePath)}
+                  alt={firstImage.altText ?? product.name}
                   fill
                   className="object-cover"
                   sizes="(min-width: 768px) 45vw, 100vw"
@@ -72,9 +73,9 @@ export default async function ProductDetailPage({ params }: { params: { slug: st
               </div>
             )}
 
-            {product.images.length > 1 && (
+            {restImages.length > 0 && (
               <div className="mt-3 grid grid-cols-4 gap-2">
-                {product.images.slice(1, 5).map((img) => (
+                {restImages.slice(0, 4).map((img) => (
                   <div key={img.storagePath} className="relative aspect-square overflow-hidden rounded">
                     <Image
                       src={getProductImageUrl(img.storagePath)}

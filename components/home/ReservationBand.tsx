@@ -9,7 +9,7 @@ export function ReservationBand() {
         <div>
           <h2 className="font-display text-3xl italic">Save your table for tonight.</h2>
           <p className="mt-2 max-w-md font-body text-sm text-cream-50/80">
-            Dine-in, private groups, or a spot at the bar — we'll have it ready.
+            Dine-in, private groups, or a spot at the bar — we’ll have it ready.
           </p>
         </div>
         <Link

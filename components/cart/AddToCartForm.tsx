@@ -189,7 +189,7 @@ export function AddToCartForm({ product }: { product: ProductDetailData }) {
       </Button>
       {missingRequiredGroup && (
         <p className="mt-2 font-body text-xs text-red-700">
-          Select an option for "{missingRequiredGroup.name}" first.
+          Select an option for “{missingRequiredGroup.name}” first.
         </p>
       )}
 

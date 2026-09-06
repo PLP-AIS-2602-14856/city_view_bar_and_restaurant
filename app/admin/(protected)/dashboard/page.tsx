@@ -10,7 +10,7 @@ export default async function AdminDashboardPage() {
       </h1>
       <p className="mt-2 font-body text-sm text-cream-100/60">
         Signed in as <span className="capitalize">{profile.role}</span>. Operational
-        widgets (today's orders, pending reservations, low-stock alerts) arrive with
+        widgets (today’s orders, pending reservations, low-stock alerts) arrive with
         the Orders/Inventory build steps.
       </p>
     </div>

@@ -110,7 +110,7 @@ export async function CataloguePageContent({
 
         {search && sectionsToShow.length === 0 ? (
           <p className={`mt-10 font-body text-sm ${dark ? 'text-cream-100/60' : 'text-charcoal-700/60'}`}>
-            No items match "{search}". Try a different search, or browse by category above.
+            No items match “{search}”. Try a different search, or browse by category above.
           </p>
         ) : (
           <div className="mt-4 space-y-14">

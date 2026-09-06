@@ -1,7 +1,7 @@
 import 'server-only';
 import { redirect } from 'next/navigation';
 import { createClient } from '@/lib/supabase/server';
-import type { UserRole } from '@/types/database.types';
+import type { UserRole, ProfileRow } from '@/types/database.types';
 
 /** The management roles allowed anywhere under /admin. */
 export const ADMIN_AREA_ROLES: UserRole[] = ['admin', 'staff', 'kitchen', 'bar'];
@@ -24,9 +24,9 @@ export async function getCurrentProfile() {
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('*')
+    .select('id, full_name, phone, role, is_active, created_at, updated_at')
     .eq('id', user.id)
-    .single();
+    .single<ProfileRow>();
 
   return profile;
 }
